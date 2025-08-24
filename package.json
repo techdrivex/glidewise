@@ -1,0 +1,39 @@
+{
+  "name": "glidewise",
+  "version": "1.0.0",
+  "description": "AI Driving Coach for Fuel & Energy Efficiency",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd mobile && npm install && cd ../server && npm install",
+    "start:mobile": "cd mobile && npm start",
+    "start:server": "cd server && npm start",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:mobile\"",
+    "build:mobile": "cd mobile && npm run build",
+    "build:server": "cd server && npm run build",
+    "test": "npm run test:mobile && npm run test:server",
+    "test:mobile": "cd mobile && npm test",
+    "test:server": "cd server && npm test",
+    "lint": "npm run lint:mobile && npm run lint:server",
+    "lint:mobile": "cd mobile && npm run lint",
+    "lint:server": "cd server && npm run lint"
+  },
+  "keywords": [
+    "ai",
+    "driving",
+    "fuel-efficiency",
+    "energy-efficiency",
+    "obd-ii",
+    "react-native",
+    "tensorflow",
+    "iot"
+  ],
+  "author": "GlideWise Contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "mobile",
+    "server"
+  ]
+}
